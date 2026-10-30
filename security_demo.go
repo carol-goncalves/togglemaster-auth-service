@@ -2,8 +2,7 @@ package main
 
 import "crypto/tls"
 
-// FIAP: demonstração de vulnerabilidade para o scanner SAST.
-// Não utilizado pela aplicação.
+// FIAP: configuração TLS segura para demonstrar a correção.
 var fiapDemoTLSConfig = &tls.Config{
-	InsecureSkipVerify: true,
+	MinVersion: tls.VersionTLS12,
 }
